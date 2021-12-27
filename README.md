@@ -8,5 +8,5 @@ Snmp lib to see https://github.com/prometheus/snmp_exporter.
 # usage
 go build .
 
-./keepalived_snmp_checker 127.0.0.1 # or your server ip
+./keepalived_snmp_checker 
 
