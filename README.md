@@ -1,5 +1,5 @@
 # keepalived_snmp_checker
-A simple checker for keepalived_snmp to get realserver status and ipaddr.
+A simple checker for keepalived_snmp to get keepalived realserver status and ipaddr.
 
 The result will be printed on stdout, for nagios to parse.
 
