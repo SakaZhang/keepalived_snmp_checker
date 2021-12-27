@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"github.com/gosnmp/gosnmp"
-	"log"
 	"net"
 	"os"
 	"strings"
@@ -79,14 +78,16 @@ func main() {
 	pollerIpaddr := InitSnmpPoller()
 	err := pollerIpaddr.Connect()
 	if err != nil {
-		log.Fatalf("checker connect err: %v\n", err)
+		fmt.Printf("checker connect err: %v\n", err)
+		os.Exit(RS_UNKNOWN)
 	}
 	defer pollerIpaddr.Conn.Close()
 
 	pollerStatus := InitSnmpPoller()
 	err = pollerStatus.Connect()
 	if err != nil {
-		log.Fatalf("checker connect err: %v\n", err)
+		fmt.Printf("checker connect err: %v\n", err)
+		os.Exit(RS_UNKNOWN)
 	}
 	defer pollerStatus.Conn.Close()
 	getRealServerIPADDR(pollerIpaddr, realServerIPADDROid)
