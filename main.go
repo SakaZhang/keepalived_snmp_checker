@@ -103,7 +103,7 @@ func main() {
 	}
 
 	if len(health_ok) == len(printRealServer) {
-		fmt.Printf("all realserver is ok.")
+		fmt.Printf("all realservers are ok.")
 		os.Exit(RS_OK)
 	}
 
